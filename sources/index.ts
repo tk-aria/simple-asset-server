@@ -1,4 +1,4 @@
-import { doGet, doPost } from "./main";
+import { doGet, doPost } from "./service/assetServer";
 
 declare const global: {
   [x: string]: unknown;
