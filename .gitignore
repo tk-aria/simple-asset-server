@@ -105,4 +105,5 @@ dist
 
 deploy/*
 !deploy/appsscript.json
+!deploy/test.js
 deploy/*/*
