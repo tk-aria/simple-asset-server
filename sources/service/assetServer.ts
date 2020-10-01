@@ -25,10 +25,12 @@ export default class AssetServer {
      * @returns {*}
      * @memberof LoginServer
      */
-    public Get() : number[] {
+    public Get() : GoogleAppsScript.Content.TextOutput {
         const fileId = this.FindFileIdFromGoogleDriveStorage(this.driveId, "naxalive_img.png");
         const requestUrl = `${fileId.getDownloadUrl()}&access_token=${ScriptApp.getOAuthToken()}`;
-        return UrlFetchApp.fetch(requestUrl).getContent();
+        Logger.log(requestUrl);
+        var responce =  UrlFetchApp.fetch(requestUrl).getContentText();
+        return ContentService.createTextOutput(requestUrl);
     }
 
     /**
@@ -82,10 +84,9 @@ export default class AssetServer {
     }
 }
 
-const server = new AssetServer("1Ov0vgZRKFdnZ5MKAYJ8Q8AnNFTow3pD1");
+const server = new AssetServer(PropertiesService.getScriptProperties().getProperty("DRIVE_ID"));
 
-export function doGet(): number[] {
-    Logger.log("get request");
+export function doGet(): GoogleAppsScript.Content.TextOutput {
     return server.Get();
 }
 
