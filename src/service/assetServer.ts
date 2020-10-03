@@ -8,7 +8,7 @@
  */
 export default class AssetServer { // AssetProvisionServer
 
-    private driveId: string = "";
+    private driveId: string;
 
     /**
      * Creates an instance of AssetServer.
