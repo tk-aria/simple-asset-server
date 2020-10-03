@@ -1,27 +1,6 @@
 {
   "scopedRegistries": [
     {
-      "name": "npmjs",
-      "url": "https://registry.npmjs.com",
-      "scopes": [
-        "jp.keijiro"
-      ]
-    },
-    {
-      "name": "ariapackages",
-      "url": "https://pkgs.dev.azure.com/aria-inc/AriaPackage/_packaging/aria.packages/npm/registry/",
-      "scopes": [
-        "com.aria"
-      ]
-    },
-    {
-      "name": "Game Package Registry by Google",
-      "url": "https://unityregistry-pa.googleapis.com",
-      "scopes": [
-        "com.google"
-      ]
-    },
-    {
       "name": "package.openupm.com",
       "url": "https://package.openupm.com",
       "scopes": [

@@ -6,7 +6,7 @@
     <e p="D:\workspace\sandbox\simple-asset-server\sandbox\unity\download_test" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="NewBehaviourScript.cs" t="Include" />
+        <e p="DownloadTest.cs" t="Include" />
       </e>
       <e p="download_test.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
