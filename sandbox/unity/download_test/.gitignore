@@ -90,3 +90,5 @@ _workspace
 
 # Project Genereration Files
 Unity/CsScriptReference/
+Assets/Download/
+Assets/Download.meta
