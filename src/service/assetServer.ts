@@ -26,11 +26,26 @@ export default class AssetServer { // AssetProvisionServer
      * @memberof LoginServer
      */
     public Get() : GoogleAppsScript.Content.TextOutput {
-        const fileId = this.FindFileIdFromGoogleDriveStorage(this.driveId, "naxalive_img.png");
+        const filename: string = "naxalive_img.png";
+        const fileId = this.FindFileIdFromGoogleDriveStorage(this.driveId, "sample.png");
         const requestUrl = `${fileId.getDownloadUrl()}&access_token=${ScriptApp.getOAuthToken()}`;
-        Logger.log(requestUrl);
-        var responce =  UrlFetchApp.fetch(requestUrl).getContentText();
-        return ContentService.createTextOutput(requestUrl);
+        //const body = fileId.getBlob().getDataAsString();
+        const body = fileId.getBlob().getBytes();
+
+        const payload = {
+          'signature': filename,
+          'url': requestUrl,
+          'body': body
+        };
+
+        const res: string = JSON.stringify(payload);
+        console.log(res);
+
+        return ContentService.createTextOutput(res);
+
+        //Logger.log(requestUrl);
+        //var responce =  UrlFetchApp.fetch(requestUrl).getContentText();
+        //return ContentService.createTextOutput(requestUrl);
     }
 
     /**
