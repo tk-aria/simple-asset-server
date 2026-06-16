@@ -21,7 +21,7 @@
   "author": "tkaria",
   "license": "MIT",
   "devDependencies": {
-    "@google/clasp": "^2.3.0",
+    "@google/clasp": "^2.5.0",
     "@types/google-apps-script": "^1.0.14",
     "@babel/core": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
